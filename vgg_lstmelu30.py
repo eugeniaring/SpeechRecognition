@@ -1,16 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jul  8 19:28:39 2020
 
-@author: lenovo
-"""
+#Here I used all the training samples, to train a CNN with the following 
+#characteristics
 
-"""
-Here I used all the training samples, to train a CNN with the following 
-characteristics
+#40*98 log mel features
 
-40*98 log mel features
-"""
 # In[]: 
 from os import listdir
 from os.path import isdir, join
@@ -136,5 +129,3 @@ print("This is the evaluation:  ",ev)
 np.save('hist_vgg_lstmelu30.npy',history.history)
 #saving to h5
 models.save_model(model,'vgg_lstmelu30.h5')
-
-
