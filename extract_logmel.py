@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 from os import listdir
 from os.path import isdir, join
 import librosa
@@ -12,8 +6,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import python_speech_features
 
-
-# In[2]:
 
 
 # Dataset path and view possible targets
@@ -176,39 +168,6 @@ def calc_mfcc(path):
     return logmel.transpose()
 
 
-# In[26]:
-
-
-#THESE ARE JUST TESTS YOU CAN REMOVE IT
-# TEST: Construct test set by computing MFCC of each WAV file
-#prob_cnt = 0
-#x_test = []
-#y_test = []
-#for index, filename in enumerate(filenames_train):
-    
-    # Stop after 500 #just to test
-    #if index >= 500:
-        #break
-    
-    # Create path from given filename and target item
-    #path = join(dataset_path, target_list[int(y_orig_train[index])], 
-                #filename)
-    
-    # Create MFCCs
-    #mfccs = calc_mfcc(path)
-    
-    #if mfccs.shape[1] == len_mfcc:
-        #x_test.append(mfccs)
-        #y_test.append(y_orig_train[index])
-    #else:
-        #print('Dropped:', index, mfccs.shape)
-        #prob_cnt += 1
-        
-
-
-# In[28]:
-
-
 # Function: Create MFCCs, keeping only ones of desired length
 def extract_features(in_files, in_y):
     prob_cnt = 0
@@ -263,8 +222,8 @@ np.savez(feature_sets_file,
          y_val=y_val, 
          x_test=x_test, 
          y_test=y_test)
-#https://numpy.org/devdocs/reference/generated/numpy.savez_compressed.html
-#so now we have created a file .NPZ in our directory li fih hadshi kamel ghir importih w kemli l khedma
+
+#so now we have created a file .NPZ in our directory
 
 
 # In[32]:
@@ -275,39 +234,12 @@ feature_sets = np.load(feature_sets_file)
 feature_sets.files
 
 
-# In[33]:
-
-
 feature_sets['x_train'].shape
 
-#GO BACK TO SKELENTON DYLAL GUGLIELMO AND SEE HOW HE FLATTENED THE ARRAY
-#so we have 47641 samples and each with 16*16 MFCC matrix 
-#https://github.com/ShawnHymel/tflite-speech-recognition/blob/master/README.md
-#SEE BELOW LINK FOR MORE INFO MUST SEE
-#https://www.digikey.com/en/maker/projects/tensorflow-lite-tutorial-part-1-wake-word-feature-extraction/54e1ce8520154081a58feb301ef9d87a
-
-
-# In[34]:
 
 
 len(feature_sets['x_train'])
 
-
-# In[36]:
-
-
 print(len(feature_sets['y_train']))
 
-
-# In[35]:
-
-
 print(feature_sets['y_val'])
-
-
-# In[ ]:
-
-
-#so now we have created a file .NPZ in our directory li fih hadshi kamel
-#NEXT CHECK MFCC DIMENSION WACH MATRIX WLA CHNOU ?
-
