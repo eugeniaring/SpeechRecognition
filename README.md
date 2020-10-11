@@ -4,7 +4,7 @@ I built a keyword spotting system that classifies 36 keywords including noise.
 The reference dataset is released by Google in August 2017.
 There are 105,836 one second long utterances of 35 words + noise, where the audio duration is one second. 
 
-1) Features extraction
+# 1) Features extraction
 
 A well established feature representation for speech is the ”logmel-spectrum”
 
@@ -16,7 +16,7 @@ Steps:
 5.  Apply **logarithmic Mel-Scale filter bank** to the Fouriertransformed frames.
 6.  Calculate **Discrete Cosine Transformation**(DCT) to obtain the 40-dimensional coefficients vector
 
-2)  Hybrid VGG+LSTM architecture
+# 2)  Hybrid VGG+LSTM architecture
 
 1. Import libraries/datasets and perform preliminary data processing
 2. Visualize features extracted
