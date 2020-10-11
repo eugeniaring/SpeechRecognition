@@ -1,4 +1,4 @@
-# Speech command recognition using CNN andCNN-LSTM Neural Networks
+# Speech command recognition using CNN and CNN-LSTM Neural Networks
 
 I built a keyword spotting system that classifies 36 keywords including noise. 
 The reference dataset is released by Google in August 2017.
