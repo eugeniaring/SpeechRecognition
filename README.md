@@ -18,7 +18,7 @@ Steps:
 
 # 2)  Hybrid VGG+LSTM architecture
 
-1. Import libraries/datasets and perform preliminary data processing
+1. Import libraries/datasets 
 2. Visualize features extracted
 3. Train an VGG+LSTM Model
 4. Assess/evaluate trained model performance
